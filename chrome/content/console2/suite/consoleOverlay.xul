@@ -188,6 +188,7 @@
 
   <toolbarbutton id="item_modeCtxChrome"  accesskey="&ctx.chr3.accesskey;"/>
   <toolbarbutton id="item_modeCtxContent" accesskey="&ctx.cnt3.accesskey;"/>
+  <toolbarbutton id="item_modeCtxResource" accesskey="Z"/>
 
   <toolbarbutton id="ButtonEval"          accesskey="&evaluate3.accesskey;"/>
   <toolbarbutton id="menu_consoleTools"   accesskey="&tools3.accesskey;"/>

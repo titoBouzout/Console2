@@ -5,7 +5,7 @@
 		<id>{1280606b-2510-4fe0-97ef-9b5a22eafe80}</id>
 		
 		<name>Console²</name>
-		<version>0.8</version>
+		<version>0.8r</version>
 		
 		<type>2</type><!-- extension -->
 		<unpack>false</unpack>

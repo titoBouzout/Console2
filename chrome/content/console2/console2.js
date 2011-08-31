@@ -9,7 +9,7 @@ var gCodeToEvaluate = null;
 var gModes = { // set to defaults
 	"": { "Errors": true, "Warnings": true, "Messages": true },
 	"Lang": { "JS": true, "CSS": false, "XML": false },
-	"Ctx": { "Chrome": false, "Content": true }
+	"Ctx": { "Chrome": false, "Content": true , "Resource": false }
 };
 
 var Cc = Components.classes;
@@ -375,13 +375,13 @@ var gBlacklist = ("@mozilla.org/permissionmanager;1" in Cc)?{
 	{
 		if (this.isSupported(aURL))
 		{
-			this.mPermissionManager.add(this.mIOService.newURI(aURL, null, null), "console2", this.DENY_DOMAIN);
+			this.mPermissionManager.add(this.mIOService.newURI(aURL.replace(/\:\/\/+/, '://'), null, null), "console2", this.DENY_DOMAIN);
 		}
 	},
 
 	isSupported: function(aURL)
 	{
-		return /^(https?|chrome):\/+./.test(aURL);
+		return /^(https?|chrome|resource):\/+./.test(aURL);
 	}
 }:{ // non-persisting version for Thunderbird
 	mIOService: Cc["@mozilla.org/network/io-service;1"].getService(Ci.nsIIOService),
@@ -431,13 +431,13 @@ var gBlacklist = ("@mozilla.org/permissionmanager;1" in Cc)?{
 	{
 		if (this.isSupported(aURL))
 		{
-			this.mBlocking[this.mIOService.newURI(aURL, null, null).host] = true;
+			this.mBlocking[this.mIOService.newURI(aURL.replace(/\:\/\/+/, '://'), null, null).host] = true;
 		}
 	},
 
 	isSupported: function(aURL)
 	{
-		return /^(https?|chrome):\/+./.test(aURL);
+		return /^(https?|chrome|resource):\/+./.test(aURL);
 	}
 };
 

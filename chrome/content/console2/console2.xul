@@ -69,6 +69,7 @@
         <broadcaster id="Console:modeLangXML" label="&lang.xml.label;" oncommand="toggleMode('XML', 'Lang');"/>
         <broadcaster id="Console:modeCtxChrome" label="&ctx.chr.label;" oncommand="toggleMode('Chrome', 'Ctx');"/>
         <broadcaster id="Console:modeCtxContent" label="&ctx.cnt.label;" oncommand="toggleMode('Content', 'Ctx');"/>
+        <broadcaster id="Console:modeCtxResource" label="Resource" oncommand="toggleMode('Resource', 'Ctx');"/>
         <broadcaster id="Console:modeDupes" label="&dupes.label;" oncommand="toggleDupes();"/>
     </broadcasterset>
 
@@ -97,6 +98,7 @@
                     <menuitem type="radio" group="ctx" label="&ctx.all.label;" accesskey="&ctx.all.accesskey;" _mode="All"/>
                     <menuitem type="radio" group="ctx" label="&ctx.chr.label;" accesskey="&ctx.chr.accesskey;" _mode="Chrome"/>
                     <menuitem type="radio" group="ctx" label="&ctx.cnt.label;" accesskey="&ctx.cnt.accesskey;" _mode="Content"/>
+                    <menuitem type="radio" group="ctx" label="Resource" accesskey="Z" _mode="Resource"/>
                 </menupopup>
             </toolbarbutton>
 
@@ -111,6 +113,7 @@
 
             <toolbarbutton id="item_modeCtxChrome" type="checkbox" observes="Console:modeCtxChrome" accesskey="&ctx.chr2.accesskey;" tooltiptext="&ctx.chr.tooltip;" class="textonly"/>
             <toolbarbutton id="item_modeCtxContent" type="checkbox" observes="Console:modeCtxContent" accesskey="&ctx.cnt2.accesskey;" tooltiptext="&ctx.cnt.tooltip;" class="textonly"/>
+            <toolbarbutton id="item_modeCtxResource" type="checkbox" observes="Console:modeCtxResource" accesskey="Z" tooltiptext="Resource" class="textonly"/>
 
             <toolbarbutton id="item_clearConsole" label="&clear.label;" accesskey="&clear.accesskey;" tooltiptext="&clear.tooltip;" oncommand="clearConsole();"/>
             <toolbarbutton id="item_copyItem" observes="cmd_copy" label="&copyCmd.label;" tooltiptext="&copyCmd.tooltip;" class="textonly"/>
@@ -184,7 +187,7 @@
                  accesskey="&extBar.accesskey;"
                  customizable="true"
                  nowindowdrag="true"
-                 defaultset="item_modeLangJS,item_modeLangCSS,item_modeLangXML,separator,item_modeCtxChrome,item_modeCtxContent,spring,menu_consoleTools"
+                 defaultset="item_modeLangJS,item_modeLangCSS,item_modeLangXML,separator,item_modeCtxChrome,item_modeCtxContent,item_modeCtxResouce,spring,menu_consoleTools"
                  context="ToolbarContext"/>
         <toolbar id="ToolbarEval"
                  class="chromeclass-toolbar"

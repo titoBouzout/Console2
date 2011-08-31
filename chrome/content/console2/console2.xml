@@ -184,7 +184,7 @@
 					
 					if (aMessage.sourceName)
 					{
-						row.setAttribute("href", aMessage.sourceName);
+						row.setAttribute("href", aMessage.sourceName.replace(/\:\/\/+/, '://'));
 						row.setAttribute("line", aMessage.lineNumber || 0);
 					}
 					else
