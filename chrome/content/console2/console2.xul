@@ -187,7 +187,7 @@
                  accesskey="&extBar.accesskey;"
                  customizable="true"
                  nowindowdrag="true"
-                 defaultset="item_modeLangJS,item_modeLangCSS,item_modeLangXML,separator,item_modeCtxChrome,item_modeCtxContent,item_modeCtxResouce,spring,menu_consoleTools"
+                 defaultset="item_modeLangJS,item_modeLangCSS,item_modeLangXML,separator,item_modeCtxChrome,item_modeCtxContent,item_modeCtxResource,spring,menu_consoleTools"
                  context="ToolbarContext"/>
         <toolbar id="ToolbarEval"
                  class="chromeclass-toolbar"

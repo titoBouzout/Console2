@@ -375,7 +375,7 @@ var gBlacklist = ("@mozilla.org/permissionmanager;1" in Cc)?{
 	{
 		if (this.isSupported(aURL))
 		{
-			this.mPermissionManager.add(this.mIOService.newURI(aURL.replace(/\:\/\/+/, '://'), null, null), "console2", this.DENY_DOMAIN);
+			this.mPermissionManager.add(this.mIOService.newURI(aURL.replace(/^resource\:\/\/\//, 'resource://app/'), null, null), "console2", this.DENY_DOMAIN);
 		}
 	},
 
@@ -431,7 +431,7 @@ var gBlacklist = ("@mozilla.org/permissionmanager;1" in Cc)?{
 	{
 		if (this.isSupported(aURL))
 		{
-			this.mBlocking[this.mIOService.newURI(aURL.replace(/\:\/\/+/, '://'), null, null).host] = true;
+			this.mBlocking[this.mIOService.newURI(aURL.replace(/^resource\:\/\/\//, 'resource://app/'), null, null).host] = true;
 		}
 	},
 
