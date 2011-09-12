@@ -65,6 +65,10 @@ sourcelink > label {
 	margin-left: 0px;
 }
 
+.console-row-content > box > description{
+	white-space: pre-wrap;
+}
+
 /* :::::::: hiding of rows for each mode ::::::::::::::: */
 
 .console-box:not([mode~="Errors"]) > .console-row[type="error"],
