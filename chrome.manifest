@@ -49,6 +49,9 @@ overlay	chrome://messenger/content/messengercompose/messengercompose.xul	chrome:
 overlay	chrome://console2/content/console2.xul	chrome://console2/content/seamonkey-hack.xul	application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
 overlay	chrome://console2/content/console2.xul	chrome://console2/content/suite/consoleOverlay.xul	application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
 
+# Komodo
+overlay	chrome://komodo/content/komodo.xul	chrome://console2/content/komodo-overlay.xul appversion>=6.9
+
 overlay	chrome://calendar/content/calendar.xul	chrome://console2/content/overlay.xul
 
 overlay	chrome://emusic/content/startup.xul	chrome://console2/content/overlay.xul
